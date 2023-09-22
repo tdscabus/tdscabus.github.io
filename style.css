@@ -7,14 +7,13 @@
 body {
   font-family: "Inter", sans-serif;
   color: #343a40;
-  line-height: 1;
+  line-height: 1.6;
   margin: 50px auto;
-  width: 1100px;
+  width: 1300px;
 }
 header {
-  padding-left: 5px;
   padding-bottom: 50px;
-  font-size: 125%;
+  font-size: 110%;
 }
 
 .main {
@@ -24,11 +23,32 @@ header {
 
   gap: 50px;
 }
-.description p {
-  padding: 0 0 8px 5px;
+.winner-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
 }
+.winner-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  padding-bottom: 40px;
+}
+.winners-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.rank-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
 .rank-title {
-  padding-left: 5px;
   padding-bottom: 20px;
 }
 

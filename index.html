@@ -7,10 +7,35 @@
     <link rel="stylesheet" href="style.css" />
     <script src="sort.js"></script>
   </head>
-  <body>
+  <body
+    onload="sortTable(5,'n','seg-result');sortTable(5,'n','cls-result');sortTable(2,'n','det-result');sortTable(11,'n','overall-result')"
+  >
     <header>
       <h1>Final Results for the TDSC-ABUS 2023 Challenge</h1>
     </header>
+    <div class="winner-title">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth="{1.5}"
+        stroke="currentColor"
+        class="winners-icon"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0"
+        />
+      </svg>
+      <p>winners:</p>
+    </div>
+    <div class="winner-name">
+      <p>Task Segmentation: <em>POA</em></p>
+      <p>Task Classification: <em>Shiontao</em></p>
+      <p>Task Detection: <em>Shiontao</em></p>
+      <p>Overall: <em>Deadluck</em></p>
+    </div>
     <main class="main">
       <div class="rank-wrap">
         <h1 class="rank-title">1. Results For Each Metric</h1>
@@ -30,6 +55,10 @@
               href="https://github.com/PerceptionComputingLab/TDSC-ABUS2023/tree/main/Final_Evaluation"
               >https://github.com/PerceptionComputingLab/TDSC-ABUS2023/tree/main/Final_Evaluation</a
             >
+          </p>
+          <p>
+            All results are shown in the following table. The '-' symbol
+            indicates that there are no results under the particular folder.
           </p>
         </div>
         <div class="combined-table complete-data">
@@ -256,6 +285,11 @@
                   </svg>
                 </div>
               </th>
+              <th>
+                <div>
+                  <p>seg.csv</p>
+                </div>
+              </th>
             </tr>
 
             <tr>
@@ -266,8 +300,8 @@
               <td>-</td>
               <td>-</td>
               <td>-</td>
-
               <td>No</td>
+              <td>-</td>
             </tr>
             <tr>
               <td>Deadluck</td>
@@ -277,8 +311,8 @@
               <td>0.7286</td>
               <td>0.7733</td>
               <td>0.7704</td>
-
               <td>Yes</td>
+              <td><a href="./seg_results/deadluck.csv">seg.csv</a></td>
             </tr>
             <tr>
               <td>Discerning Tumor</td>
@@ -289,6 +323,7 @@
               <td>-</td>
               <td>-</td>
               <td>Yes</td>
+              <td>-</td>
             </tr>
             <tr>
               <td>Dolphins</td>
@@ -299,6 +334,7 @@
               <td>-</td>
               <td>-</td>
               <td>Yes</td>
+              <td><a href="./seg_results/dolphins.csv">seg.csv</a></td>
             </tr>
             <tr>
               <td>Eureka</td>
@@ -309,6 +345,7 @@
               <td>0.6425</td>
               <td>0.6441</td>
               <td>Yes</td>
+              <td><a href="./seg_results/eureka.csv">seg.csv</a></td>
             </tr>
             <tr>
               <td>FathomX</td>
@@ -319,6 +356,7 @@
               <td>0.5675</td>
               <td>0.6153</td>
               <td>Yes</td>
+              <td><a href="./seg_results/fathomx.csv">seg.csv</a></td>
             </tr>
             <tr>
               <td>Infertdsc</td>
@@ -329,6 +367,7 @@
               <td>-</td>
               <td>-</td>
               <td>Yes</td>
+              <td><a href="./seg_results/infertdsc.csv">seg.csv</a></td>
             </tr>
             <tr>
               <td>Mispl</td>
@@ -339,6 +378,7 @@
               <td>0.7642</td>
               <td>0.0000</td>
               <td>Yes</td>
+              <td><a href="./seg_results/mispl.csv">seg.csv</a></td>
             </tr>
             <tr>
               <td>Nvauto</td>
@@ -349,6 +389,7 @@
               <td>-</td>
               <td>-</td>
               <td>Yes</td>
+              <td><a href="./seg_results/nvauto.csv">seg.csv</a></td>
             </tr>
             <tr>
               <td>POA</td>
@@ -359,6 +400,7 @@
               <td>0.6558</td>
               <td>0.7303</td>
               <td>Yes</td>
+              <td><a href="./seg_results/poa.csv">seg.csv</a></td>
             </tr>
             <tr>
               <td>Sante2024</td>
@@ -369,6 +411,7 @@
               <td>0.5775</td>
               <td>0.6383</td>
               <td>Yes</td>
+              <td><a href="./seg_results/sante2024.csv">seg.csv</a></td>
             </tr>
             <tr>
               <td>Shiontao</td>
@@ -379,6 +422,7 @@
               <td>0.8892</td>
               <td>0.8468</td>
               <td>Yes</td>
+              <td><a href="./seg_results/shiontao.csv">seg.csv</a></td>
             </tr>
             <tr>
               <td>SMART</td>
@@ -389,6 +433,7 @@
               <td>-</td>
               <td>-</td>
               <td>Yes</td>
+              <td>-</td>
             </tr>
             <tr>
               <td>Smcnscp</td>
@@ -399,6 +444,7 @@
               <td>-</td>
               <td>0.5327</td>
               <td>Yes</td>
+              <td>-</td>
             </tr>
             <tr>
               <td>Strollers</td>
@@ -409,6 +455,7 @@
               <td>-</td>
               <td>0.3913</td>
               <td>Yes</td>
+              <td><a href="./seg_results/strollers.csv">seg.csv</a></td>
             </tr>
             <tr>
               <td>Sunggukyung</td>
@@ -419,6 +466,7 @@
               <td>0.6842</td>
               <td>-</td>
               <td>No</td>
+              <td>-</td>
             </tr>
             <tr>
               <td>UCLA CDX</td>
@@ -429,6 +477,7 @@
               <td>-</td>
               <td>-</td>
               <td>Yes</td>
+              <td><a href="./seg_results/ucla_cdx.csv">seg.csv</a></td>
             </tr>
             <tr>
               <td>Vicorob</td>
@@ -439,6 +488,7 @@
               <td>-</td>
               <td>0.6459</td>
               <td>Yes</td>
+              <td><a href="./seg_results/vicorob.csv">seg.csv</a></td>
             </tr>
             <tr>
               <td>Yangzikai</td>
@@ -449,6 +499,7 @@
               <td>0.7708</td>
               <td>0.6067</td>
               <td>Yes</td>
+              <td><a href="./seg_results/yangzikai.csv">seg.csv</a></td>
             </tr>
             <tr>
               <td>Zhaoqiaochu</td>
@@ -459,12 +510,26 @@
               <td>-</td>
               <td>-</td>
               <td>Yes</td>
+              <td><a href="./seg_results/yangzikai.csv">seg.csv</a></td>
             </tr>
           </table>
         </div>
       </div>
       <div class="rank-wrap">
-        <h1 class="rank-title">Segmentation Rank</h1>
+        <h1 class="rank-title">2. Segmentation Rank</h1>
+        <div class="description">
+          <p>
+            The segmentation task involves two metrics: the DICE coefficient and
+            the Hausdorff distance (HD). <br />
+            Initially, we eliminated teams that did not provide valid results.
+            <br />
+            Subsequently, we normalized the remaining teams' scores using
+            min-max normalization, <br />
+            calculated as (x - min(x)) / (max(x) - min(x)). Since lower HD
+            scores are better, <br />
+            we computed the final result as (1 + Norm_DICE - Norm_HD) / 2.
+          </p>
+        </div>
         <div class="combined-table seg-rank">
           <table id="rank">
             <tr class="head">
@@ -709,7 +774,16 @@
         </div>
       </div>
       <div class="rank-wrap">
-        <h1 class="rank-title">Classification Rank</h1>
+        <h1 class="rank-title">3. Classification Rank</h1>
+        <div>
+          <p>
+            For the classification task, we eliminated teams that did not
+            provide valid results. <br />
+            We then normalized the remaining teams' scores using min-max
+            normalization. <br />
+            The final result is calculated as (Norm_ACC + Norm_AUC) / 2.
+          </p>
+        </div>
         <div class="combined-table cls-rank">
           <table id="rank">
             <tr class="head">
@@ -942,7 +1016,21 @@
         </div>
       </div>
       <div class="rank-wrap">
-        <h1 class="rank-title">Detection Rank</h1>
+        <h1 class="rank-title">4. Detection Rank</h1>
+        <div class="description">
+          <p>
+            The evaluation of the detection performance utilizes the
+            Free-Response Receiver Operating Characteristic (FROC) metric.
+            <br />
+            The FROC performance is presented in terms of sensitivities at
+            different false positive (FP) levels. Specifically, <br />
+            the average sensitivity at FP rates of 0.125, 0.25, 0.5, 1, 2, 4,
+            and 8 <br />
+            is employed as the primary evaluation metric for assessing the
+            detection performance. <br />
+            These values are subsequently subjected to min-max normalization.
+          </p>
+        </div>
         <div class="combined-table froc-rank">
           <table id="rank">
             <tr class="head">
@@ -1020,7 +1108,7 @@
                   </svg>
                 </div>
               </th>
-              <th onclick="sortTable(2,'a','det-result')">
+              <th onclick="sortTable(2,'n','det-result')">
                 <div>
                   <p>Det_Score</p>
                   <svg
@@ -1102,7 +1190,19 @@
         </div>
       </div>
       <div class="rank-wrap">
-        <h1 class="rank-title">Overall Rank</h1>
+        <h1 class="rank-title">5. Overall Rank</h1>
+        <div class="description">
+          <p>
+            The overall performance is determined by considering only the teams
+            that have submitted valid results for all metrics.
+            <br />We apply similar normalization methods as before, but
+            exclusively for teams with valid results. <br />
+            The final overall result is obtained by:
+            <br />
+            (1 + Norm_DICE - Norm_HD) / 2 + (Norm_ACC + Norm_AUC) / 2 +
+            Norm_FROC
+          </p>
+        </div>
         <div class="combined-table overall-rank">
           <table id="rank">
             <tr class="head">
@@ -1148,7 +1248,7 @@
 
               <th onclick="sortTable(1,'n','overall-result')">
                 <div>
-                  <p>Seg_Score</p>
+                  <p>DICE</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -1168,7 +1268,7 @@
 
               <th onclick="sortTable(2,'n','overall-result')">
                 <div>
-                  <p>Cls_Score</p>
+                  <p>Norm_Dice</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -1187,7 +1287,7 @@
               </th>
               <th onclick="sortTable(3,'n','overall-result')">
                 <div>
-                  <p>Det_Score</p>
+                  <p>HD</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -1206,7 +1306,140 @@
               </th>
               <th onclick="sortTable(4,'n','overall-result')">
                 <div>
-                  <p>Total_Score</p>
+                  <p>Norm_HD</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="sort_icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+                    />
+                  </svg>
+                </div>
+              </th>
+              <th onclick="sortTable(5,'n','overall-result')">
+                <div>
+                  <p>ACC</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="sort_icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+                    />
+                  </svg>
+                </div>
+              </th>
+              <th onclick="sortTable(6,'n','overall-result')">
+                <div>
+                  <p>Norm_ACC</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="sort_icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+                    />
+                  </svg>
+                </div>
+              </th>
+              <th onclick="sortTable(7,'n','overall-result')">
+                <div>
+                  <p>AUC</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="sort_icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+                    />
+                  </svg>
+                </div>
+              </th>
+              <th onclick="sortTable(8,'n','overall-result')">
+                <div>
+                  <p>Norm_AUC</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="sort_icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+                    />
+                  </svg>
+                </div>
+              </th>
+              <th onclick="sortTable(9,'n','overall-result')">
+                <div>
+                  <p>FROC</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="sort_icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+                    />
+                  </svg>
+                </div>
+              </th>
+              <th onclick="sortTable(10,'n','overall-result')">
+                <div>
+                  <p>Norm_FROC</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="sort_icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+                    />
+                  </svg>
+                </div>
+              </th>
+              <th onclick="sortTable(11,'n','overall-result')">
+                <div>
+                  <p>Overall</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -1227,40 +1460,75 @@
 
             <tr>
               <td>Deadluck</td>
-              <td>0.6916</td>
-              <td>0.7533</td>
-              <td>0.8323</td>
-              <td>2.2772</td>
+              <td>0.5616</td>
+              <td>0.5449</td>
+              <td>162.9371</td>
+              <td>1</td>
+              <td>0.7286</td>
+              <td>1</td>
+              <td>0.7733</td>
+              <td>1</td>
+              <td>0.7704</td>
+              <td>1</td>
+              <td>2.2724</td>
             </tr>
 
             <tr>
               <td>Eureka</td>
-              <td>0.6154</td>
-              <td>0.2499</td>
-              <td>0.5550</td>
-              <td>1.4203</td>
+              <td>0.4981</td>
+              <td>0.0</td>
+              <td>153.1</td>
+              <td>0.8638</td>
+              <td>0.6</td>
+              <td>0.3077</td>
+              <td>0.6425</td>
+              <td>0.3644</td>
+              <td>0.6441</td>
+              <td>0.1857</td>
+              <td>0.5898</td>
             </tr>
             <tr>
               <td>FathomX</td>
-              <td>0.7689</td>
-              <td>0.0000</td>
-              <td>0.4918</td>
-              <td>1.2607</td>
+              <td>0.54</td>
+              <td>0.3593</td>
+              <td>121.2</td>
+              <td>0.423</td>
+              <td>0.5429</td>
+              <td>0.0</td>
+              <td>0.5675</td>
+              <td>0.0</td>
+              <td>0.6153</td>
+              <td>0.0</td>
+              <td>0.4681</td>
             </tr>
 
             <tr>
               <td>POA</td>
-              <td>0.9722</td>
-              <td>0.3706</td>
-              <td>0.7442</td>
-              <td>2.0870</td>
+              <td>0.6147</td>
+              <td>1.0</td>
+              <td>90.53</td>
+              <td>0.0</td>
+              <td>0.6429</td>
+              <td>0.5385</td>
+              <td>0.6558</td>
+              <td>0.4291</td>
+              <td>0.7303</td>
+              <td>0.7415</td>
+              <td>2.2253</td>
             </tr>
             <tr>
               <td>Sante2024</td>
-              <td>0.8316</td>
-              <td>0.0155</td>
-              <td>0.5423</td>
-              <td>1.3894</td>
+              <td>0.5377</td>
+              <td>0.3397</td>
+              <td>96.51</td>
+              <td>0.08247</td>
+              <td>0.5429</td>
+              <td>0.0</td>
+              <td>0.5775</td>
+              <td>0.04858</td>
+              <td>0.6383</td>
+              <td>0.1483</td>
+              <td>0.8012</td>
             </tr>
           </table>
         </div>
