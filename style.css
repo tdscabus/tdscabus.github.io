@@ -35,8 +35,12 @@ header {
   align-items: center;
   justify-content: space-between;
   font-weight: bold;
+}
+
+.winner-name:last-child {
   padding-bottom: 40px;
 }
+
 .winners-icon {
   height: 24px;
   width: 24px;
